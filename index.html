@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cistercian Number system</title>
+<link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="Wordrender.js"></script>
+<script type="text/javascript" src="Cistercian.js"></script>
+<script type="text/javascript" src="Tally.js"></script>
+<script type="text/javascript">
+	function init() {
+		let cistercians = document.querySelectorAll(".cistercian");
+		for ( let el of cistercians ) {
+			new Cistercian(el)
+		}
+
+		let tally = document.querySelectorAll(".tally");
+		for ( let el of tally ) {
+			new Tally(el)
+		}
+	}
+</script>
+</head>
+
+<body onload="init();">
+
+	<div class="container">
+		<div class="section">
+			<h3>Cistercian Number system</h3>
+			<p>A quick code test to see and get a feel for the cistercian number system/cypher.</p>
+		</div>
+		<div class="section">
+			<p>And a tally system too just to show that custom shapes can be defined using any number of lines</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="section">
+			<div class="cistercian-wrap">
+				<canvas class='cistercian' width="40" data-word="1234"></canvas>
+				<canvas class='cistercian' width="40" data-word="5678"></canvas>
+				<canvas class='cistercian' width="40" data-word="9999"></canvas>
+				<canvas class='cistercian' width="40" data-word="2020"></canvas>
+				<canvas class='cistercian' width="40" data-word="1107"></canvas>
+				<canvas class='cistercian' width="40" data-word="0320"></canvas>
+			</div>
+		</div>
+		<div class="section">
+				<div class="cistercian-wrap">
+					<canvas class='tally' height="40" data-word="1"></canvas>
+					<canvas class='tally' height="40" data-word="2"></canvas>
+					<canvas class='tally' height="40" data-word="3"></canvas>
+					<canvas class='tally' height="40" data-word="4"></canvas>
+					<canvas class='tally' height="40" data-word="5"></canvas>
+				</div>
+			</div>
+	</div>
+
+</body>
+</html>
